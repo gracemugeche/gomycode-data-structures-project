@@ -1,0 +1,33 @@
+//dot-product program
+
+VAR
+  v1, v2: ARRAY[1..100] OF INTEGER;
+  n, i: INTEGER;
+
+FUNCTION Dot_Product(v1, v2: ARRAY OF INTEGER; n: INTEGER): INTEGER;
+VAR
+  ps, j: INTEGER;
+BEGIN
+  ps := 0;
+  FOR j := 1 TO n DO
+    ps := ps + (v1[j] * v2[j]);
+  Dot_Product := ps;
+END;
+
+BEGIN
+  WRITE('Enter the size of the vectors: ');
+  READLN(n);
+  
+  WRITE('Enter elements of first vector: ');
+  FOR i := 1 TO n DO
+    READ(v1[i]);
+  
+  WRITE('Enter elements of second vector: ');
+  FOR i := 1 TO n DO
+    READ(v2[i]);
+  
+  IF Dot_Product(v1, v2, n) = 0 THEN
+    WRITELN('Vectors are orthogonal')
+  ELSE
+    WRITELN('Vectors are NOT orthogonal');
+END.
