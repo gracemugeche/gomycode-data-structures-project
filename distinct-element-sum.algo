@@ -3,7 +3,7 @@ ALGORITHM sum_of_distinct_elements
 VAR
    set1, set2 : ARRAY_OF INTEGER[5];
    size1, size2 : INTEGER;           
-   sum, i, j : INTEGER
+   sum, i, j : INTEGER;
 
    BEGIN
    
