@@ -16,7 +16,7 @@ END;
 
 BEGIN
   WRITE('Enter the size of the vectors: ');
-  READLN(n);
+  READLN (n);
   
   WRITE('Enter elements of first vector: ');
   FOR i := 1 TO n DO
